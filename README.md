@@ -1,2 +1,4 @@
-# ml-app-template
-ML App Template
+# ML App Template
+
+Built with:
+- FastAPI
