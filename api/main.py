@@ -14,7 +14,6 @@ class PredictRequest(BaseModel):
 
 
 class PredictResponse(BaseModel):
-    id: int
     sentiment: float
 
 
@@ -26,9 +25,9 @@ async def get_health():
     return "healthy"
 
 
-@app.post("/api/v1.0/predict", response_model=PredictResponse)
-async def predict_sentiment(request_payload: PredictRequest):
+@app.post("/api/v1.0/predict")
+async def predict_sentiment(item: PredictRequest):
     """
-    Predicts sentiment of a movie review.
+    Returns the length of the string
     """
-    pass
+    return len(item.review)
