@@ -2,3 +2,4 @@
 
 Built with:
 - FastAPI
+- Docker
