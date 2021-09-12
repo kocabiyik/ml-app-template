@@ -10,7 +10,7 @@ on:
     types: [ created ]
 
 env:
-  AWS_REGION: eu-central-1
+  AWS_REGION: eu-central-1a
   ECR_REPOSITORY: ml-app-temp 
   ECS_SERVICE: test-service # set this to your Amazon ECS service name
   ECS_CLUSTER: test-cluster                   # set this to your Amazon ECS cluster name
