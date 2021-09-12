@@ -3,14 +3,14 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Deploy to Amazon ECS
+name: Deploy to Amazon ECS (Test)
 
 on:
   release:
     types: [ created ]
 
 env:
-  AWS_REGION: eu-central-1a
+  AWS_REGION: eu-central-1
   ECR_REPOSITORY: ml-app-temp 
   ECS_SERVICE: test-service # set this to your Amazon ECS service name
   ECS_CLUSTER: test-cluster                   # set this to your Amazon ECS cluster name
