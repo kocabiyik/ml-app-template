@@ -5,8 +5,8 @@
     "networkMode": "bridge",
     "containerDefinitions": [
         {
-            "name": "mlapp",
-            "image": "644256632426.dkr.ecr.eu-central-1.amazonaws.com/ml-app-temp",
+            "name": "mlapptemplate",
+            "image": "",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
@@ -89,7 +89,7 @@
             ],
             "dependsOn": [
                 {
-                    "containerName": "ml-app-template",
+                    "containerName": "",
                     "condition": "HEALTHY"
                 }
             ],
@@ -142,7 +142,7 @@
             },
             "healthCheck": {
                 "command": [
-                    "/health"
+                    ""
                 ],
                 "interval": 0,
                 "timeout": 0,
@@ -157,7 +157,7 @@
             ],
             "resourceRequirements": [
                 {
-                    "value": "0",
+                    "value": "",
                     "type": "GPU"
                 }
             ],
