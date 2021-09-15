@@ -1,12 +1,12 @@
 {
-    "family": "",
+    "family": "mlapp",
     "taskRoleArn": "",
     "executionRoleArn": "",
     "networkMode": "bridge",
     "containerDefinitions": [
         {
-            "name": "mlapptemplate",
-            "image": "",
+            "name": "mlapp",
+            "image": "644256632426.dkr.ecr.eu-central-1.amazonaws.com/ml-app-temp",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
@@ -89,7 +89,7 @@
             ],
             "dependsOn": [
                 {
-                    "containerName": "",
+                    "containerName": "ml-app-template",
                     "condition": "HEALTHY"
                 }
             ],
@@ -142,7 +142,7 @@
             },
             "healthCheck": {
                 "command": [
-                    ""
+                    "/health"
                 ],
                 "interval": 0,
                 "timeout": 0,
@@ -157,7 +157,7 @@
             ],
             "resourceRequirements": [
                 {
-                    "value": "",
+                    "value": "0",
                     "type": "GPU"
                 }
             ],
